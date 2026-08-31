@@ -22,3 +22,13 @@ function parseDuration(input) {
 }
 
 module.exports = { lastItems, parseDuration };
+
+/**
+ * Truncates a string to `max` characters, appending an ellipsis.
+ */
+function truncate(text, max) {
+  if (text.length < max) {
+    return text;
+  }
+  return text.substring(0, max) + '...';
+}
