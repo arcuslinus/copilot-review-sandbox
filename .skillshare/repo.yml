@@ -1,0 +1,8 @@
+schemaVersion: 2
+variables:
+  repoName: "copilot-review-sandbox"
+  packageManager: "npm"
+  runPrefix: "npx"
+  nodeVersion: "22"
+  formatCommand: "true"
+tools: [github-copilot]
