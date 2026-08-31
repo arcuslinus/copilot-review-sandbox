@@ -22,3 +22,16 @@ function parseDuration(input) {
 }
 
 module.exports = { lastItems, parseDuration };
+
+/**
+ * Formats a byte count as a human-readable string.
+ */
+function formatBytes(bytes) {
+  const units = ['B', 'KB', 'MB', 'GB'];
+  let i = 0;
+  while (bytes > 1024) {
+    bytes = bytes / 1024;
+    i++;
+  }
+  return bytes.toFixed(1) + ' ' + units[i];
+}
