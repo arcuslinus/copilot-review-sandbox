@@ -22,3 +22,10 @@ function parseDuration(input) {
 }
 
 module.exports = { lastItems, parseDuration };
+
+/**
+ * Clamps a number into the [min, max] range.
+ */
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
