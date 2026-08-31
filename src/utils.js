@@ -22,3 +22,14 @@ function parseDuration(input) {
 }
 
 module.exports = { lastItems, parseDuration };
+
+/**
+ * Returns a debounced version of `fn`.
+ */
+function debounce(fn, waitMs) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), waitMs);
+  };
+}
